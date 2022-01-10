@@ -1,10 +1,9 @@
 /* eslint-disable linebreak-style */
-const AboutPage = {
+const Educate = {
     runder() {
         return `
-        <h1></h1>
+        <h1> chương trình đào tạo </h1>
         `;
     },
 };
-
-export default AboutPage;
+export default Educate;

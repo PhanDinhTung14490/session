@@ -1,9 +1,9 @@
 /* eslint-disable linebreak-style */
 
 const ProductPage = {
-    print() {
+    runder() {
         return /* html */`
-        <h1> </h1>
+        <h1>Product Page</h1>
       
         `;
     },

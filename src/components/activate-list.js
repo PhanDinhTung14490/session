@@ -1,31 +1,29 @@
 /* eslint-disable linebreak-style */
-import { data } from "../data";
+import { activate } from "../data";
 
-const NewList = {
+const ActivateList = {
     runder() {
         return /* html */`
-        
-        <h2 class="my-8 font-bold uppercase text-cyan-900 text-2xl"> tin tức học tập </h2>
+        <h2 class="my-8 font-bold uppercase text-cyan-900 text-2xl"> hoạt động sinh viên </h2>
         <div class="grid  grid-cols-3 gap-8"> 
 
-        ${data.map((post) => `
+        ${activate.map((value) => `
         
         <div class="content-list-item border border-bg-black">
         <div class="p-6">
          <a href="#">
-           <img width="100%" src="${post.img}" alt="">
+           <img width="100%" src="${value.img}" alt="">
          </a>
          <h3 class="title-tiem my-2 text-lg text-orange-600 font-medium my-8">
-           ${post.title}
+           ${value.title}
          </h3>
-         <p class="font-normal">${post.desc}</p>
+         <p class="font-normal">${value.desc}</p>
         </div>
        </div>
         `).join("")}
         </div>
-        
         `;
     },
 };
 
-export default NewList;
+export default ActivateList;
