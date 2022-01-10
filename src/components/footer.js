@@ -2,7 +2,7 @@
 const Footer = {
     runder() {
         return `
-        <span class="text-white uppercase  ">
+        <span class="text-white uppercase text-center ">
         bùi hồng hạnh
     </span>
         `;
