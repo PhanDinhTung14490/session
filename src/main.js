@@ -2,12 +2,19 @@
 import Navigo from "navigo";
 import Footer from "./components/footer";
 import Header from "./components/header";
+import AddProduct from "./pages/admin/add";
+import AdminDashboard from "./pages/admin/dashboard";
+import AdminEditProduct from "./pages/admin/product-edit";
+import ProductPage from "./pages/admin/product-page";
 // import AboutPage from "./pages/about";
 import Admission from "./pages/admissions";
+import DetailPage from "./pages/detail";
 import Educate from "./pages/educate";
 import HomePage from "./pages/homepage";
 // import ProductPage from "./pages/product";
 import Recruitment from "./pages/recruitment";
+import SingIn from "./pages/signin";
+import SignUp from "./pages/signup";
 import Students from "./pages/student";
 
 // console.log(HomePage);
@@ -37,6 +44,32 @@ router.on({
     "/recruitment": () => {
         runder(Recruitment.runder());
     },
+    "/signup": () => {
+        runder(SignUp.runder());
+    },
+    "/signin": () => {
+        runder(SingIn.runder());
+    },
+    "/admin/add": () => {
+        runder(AddProduct.runder());
+    },
+    "/admin/edit/:id": ({ data }) => {
+        const { id } = data;
+        runder(AdminEditProduct.runder(+id));
+    },
+
+    // chi tiet bai viet
+    "/detail/:id": ({ data }) => {
+        const { id } = data;
+        runder(DetailPage.runder(+id));
+    },
+    "/product/admin": () => {
+        runder(ProductPage.runder());
+    },
+    "/admin/dashboard": () => {
+        runder(AdminDashboard.runder());
+    },
+
 });
 
 router.resolve();
