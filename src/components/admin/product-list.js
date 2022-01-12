@@ -61,9 +61,7 @@ const ProductList = {
           <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
             <a href="/admin/edit/${value.id}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
           </td>
-          <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-            <a href="" class="text-rose-500">Delete</a>
-          </td>
+        
         </tr>
           
           `).join("")}

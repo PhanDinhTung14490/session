@@ -1,9 +1,10 @@
 /* eslint-disable linebreak-style */
 import Navigo from "navigo";
+import AdminDashboard from "./components/admin/dashboard";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import AddProduct from "./pages/admin/add";
-import AdminDashboard from "./pages/admin/dashboard";
+
 import AdminEditProduct from "./pages/admin/product-edit";
 import ProductPage from "./pages/admin/product-page";
 // import AboutPage from "./pages/about";

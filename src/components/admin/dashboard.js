@@ -75,6 +75,7 @@ const AdminDashboard = {
                 </div>
               </div>
             </div>
+            
         
             <!-- Mobile menu, show/hide based on menu state. -->
             <div class="md:hidden" id="mobile-menu">

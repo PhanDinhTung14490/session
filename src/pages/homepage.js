@@ -9,7 +9,7 @@ const HomePage = {
         return /* html */`
        <div class="container mx-auto"> 
      
-       <div class="mt-6"> 
+       <div class="mt-4"> 
        ${Banner.runder()}
        </div>
 
