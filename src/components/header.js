@@ -27,7 +27,7 @@ const Header = {
                     <a href="/students" class="text-white p-3 hover:text-pink-900">Góc Sinh Viên</a>
                 </li>
                 <li class="px-6">
-                    <a href="/recruitment" class="text-white p-3 hover:text-pink-900">Tuyển Dụng</a>
+                    <a href="/admin/dashboard" class="text-white p-3 hover:text-pink-900">Admin</a>
                 </li>
             </ul>
         </nav>
