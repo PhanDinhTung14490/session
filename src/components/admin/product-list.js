@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { data } from "../../data";
 
 /* eslint-disable linebreak-style */
@@ -5,20 +6,21 @@ const ProductList = {
     runder() {
         return /* html */`
         <table class="min-w-full divide-y divide-gray-200 my-8 ">
-          <thead class="bg-gray-50">
+          <thead class="bg-slate-200 w-24 ">
             <tr>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                id bai viet 
+                id product
               </th>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                tieu de
+                title
               </th>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                anh 
+                images 
               </th>
               <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                mo ta
+              description
               </th>
+              
               <th scope="col" class="relative px-6 py-3">
                 <span class="sr-only">Edit</span>
               </th>
@@ -48,16 +50,19 @@ const ProductList = {
             
           </td>
           <td class="px-6 py-4 whitespace-nowrap">
-            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+           
              
-              <img class="h-10 w-10 rounded-full" src=" ${value.img}" alt="">
-            </span>
+              <img class="w-24" src=" ${value.img}" alt="">
+           
           </td>
           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
             ${value.desc}
           </td>
           <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
             <a href="/admin/edit/${value.id}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+          </td>
+          <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+            <a href="" class="text-rose-500">Delete</a>
           </td>
         </tr>
           
@@ -67,9 +72,9 @@ const ProductList = {
             <!-- More people... -->
           </tbody>
         </table>
-        <button class="bg-amber-600 rounded-full px-8 py-2 text-white hover:text-pink-900" >
-            add product
-      </button>
+        
+            <a href="/admin/add" class="bg-amber-600 rounded-full px-8 py-2 text-white hover:text-pink-900">add product</a>
+     
         `;
     },
 };
