@@ -8,15 +8,13 @@ import AddProduct from "./pages/admin/add";
 import AdminEditProduct from "./pages/admin/product-edit";
 import ProductPage from "./pages/admin/product-page";
 // import AboutPage from "./pages/about";
-import Admission from "./pages/admissions";
 import DetailPage from "./pages/detail";
-import Educate from "./pages/educate";
+
 import HomePage from "./pages/homepage";
 // import ProductPage from "./pages/product";
-import Recruitment from "./pages/recruitment";
+
 import SingIn from "./pages/signin";
 import SignUp from "./pages/signup";
-import Students from "./pages/student";
 
 // console.log(HomePage);
 const router = new Navigo("/", { linksSelector: "a" });
@@ -31,19 +29,6 @@ router.on({
     "/": () => {
         runder(HomePage.runder());
         // console.log("home page");
-    },
-    "/admission": () => {
-        runder(Admission.runder());
-        // console.log("about page");
-    },
-    "/educate": () => {
-        runder(Educate.runder());
-    },
-    "/students": () => {
-        runder(Students.runder());
-    },
-    "/recruitment": () => {
-        runder(Recruitment.runder());
     },
     "/signup": () => {
         runder(SignUp.runder());
