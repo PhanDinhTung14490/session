@@ -1,7 +1,10 @@
+import NavAdmin from "../../../components/admin/NavAdmin";
+
 /* eslint-disable linebreak-style */
 const AddProduct = {
     runder() {
         return /* html */`
+        <div> ${NavAdmin.runder()} </div>
         <form action="#" method="POST" class="container mx-auto px-80 my-8">
        
         <div class="shadow sm:rounded-md sm:overflow-hidden">

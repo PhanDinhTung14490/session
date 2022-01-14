@@ -2,9 +2,11 @@
 const Footer = {
     runder() {
         return `
-        <span class="text-white uppercase text-center ">
-        bùi hồng hạnh
-    </span>
+        <footer class="bg-indigo-900 py-6 my-4 text-center">
+            <span class="text-white uppercase ">
+                bùi hồng hạnh
+            </span>
+        </footer>
         `;
     },
 };

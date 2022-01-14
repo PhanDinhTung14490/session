@@ -1,12 +1,14 @@
 /* eslint-disable linebreak-style */
-import { data } from "../../data";
+
+import NavAdmin from "../../../components/admin/NavAdmin";
+import { data } from "../../../data";
 
 const AdminEditProduct = {
     runder(id) {
         const result = data.find((post) => post.id === id);
         return /* html */`
         
-
+        <div> ${NavAdmin.runder()} </div>
         <form action="#" method="POST" class="container mx-auto px-80 my-8">
        
         <div class="shadow sm:rounded-md sm:overflow-hidden">

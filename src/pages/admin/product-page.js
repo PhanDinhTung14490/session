@@ -1,4 +1,5 @@
 /* eslint-disable linebreak-style */
+
 import ProductList from "../../components/admin/product-list";
 
 const ProductPage = {

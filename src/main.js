@@ -1,12 +1,11 @@
 /* eslint-disable linebreak-style */
 import Navigo from "navigo";
-import AdminDashboard from "./components/admin/dashboard";
-import Footer from "./components/footer";
-import Header from "./components/header";
-import AddProduct from "./pages/admin/add";
 
-import AdminEditProduct from "./pages/admin/product-edit";
+import DashboardAdmin from "./pages/admin/dashboard";
+import AddProduct from "./pages/admin/news/add";
+import AdminEditProduct from "./pages/admin/news/product-edit";
 import ProductPage from "./pages/admin/product-page";
+
 // import AboutPage from "./pages/about";
 import DetailPage from "./pages/detail";
 
@@ -21,9 +20,8 @@ const router = new Navigo("/", { linksSelector: "a" });
 
 const runder = (content) => {
     // console.log(content);
-    document.querySelector("#header").innerHTML = Header.runder();
+
     document.querySelector("#app").innerHTML = content;
-    document.querySelector("#footer").innerHTML = Footer.runder();
 };
 router.on({
     "/": () => {
@@ -53,7 +51,7 @@ router.on({
         runder(ProductPage.runder());
     },
     "/admin/dashboard": () => {
-        runder(AdminDashboard.runder());
+        runder(DashboardAdmin.runder());
     },
 
 });
