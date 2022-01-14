@@ -1,5 +1,6 @@
 /* eslint-disable linebreak-style */
-import { data } from "../../data";
+
+import data from "../../data";
 import NavAdmin from "./NavAdmin";
 
 /* eslint-disable linebreak-style */
@@ -7,65 +8,83 @@ const NewsList = {
     runder() {
         return /* html */`
         <div> ${NavAdmin.runder()} </div>
-        <table class="min-w-full divide-y divide-gray-200 my-8 ">
-          <thead class="bg-slate-200 w-24 ">
-            <tr>
-              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                id product
-              </th>
-              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                title
-              </th>
-              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                images 
-              </th>
-              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              description
-              </th>
+        <div class="max-w-5xl mx-auto">
+        <div class="-my-0 sm:-mx-6 lg:-mx-8">
+          <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+              <table class="min-w-full divide-y divide-gray-200">
+              <div class="mt-5 flex lg:mt-0 lg:ml-4">
               
-              <th scope="col" class="relative px-6 py-3">
-                <span class="sr-only">Edit</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody class="bg-white divide-y divide-gray-200">
-          ${data.map((value) => `
-          <tr>
-          <td class="px-6 py-4 whitespace-nowrap">
-            <div class="flex items-center">
-              <div class="flex-shrink-0 h-10 w-10">
-              ${value.id}
-               
-              </div>
-            </div>
-          </td>
-          <td class="px-6 py-4 whitespace-nowrap">
-            <div class="text-sm text-gray-900">   ${value.title}</div>
-            
-          </td>
-          <td class="px-6 py-4 whitespace-nowrap">
-           
-             
-              <img class="w-24" src=" ${value.img}" alt="">
-           
-          </td>
-          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-            ${value.desc}
-          </td>
-          <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-            <a href="/admin/edit/${value.id}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
-          </td>
-        
-        </tr>
-          
-          `).join("")}
-           
+                    <thead class="bg-slate-200 w-24 ">
+                    <tr>
+                    <th scope="col" class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        id 
+                    </th>
+                    <th scope="col" class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        title
+                    </th>
+                    <th scope="col" class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        images 
+                    </th>   
+                    <th scope="col" class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    description
+                    </th>
+                    <th scope="col" class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    edit
+                    </th>
+                    <th scope="col" class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    delete
+                    </th>
+                    
+                    <th scope="col" class="relative px-6 py-3">
+                        <span class="sr-only">Edit</span>
+                    </th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                ${data.map((value) => `
+                <tr>
+                <td class="px-4 py-4 whitespace-nowrap">
+                    <div class="flex items-center">
+                    <div class="flex-shrink-0 h-10 w-10">
+                    ${value.id}
+                    
+                    </div>
+                    </div>
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap">
+                    <div class="text-sm text-gray-900">   ${value.title}</div>
+                    
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap">
+                
+                    
+                    <img class="w-[300px]" src=" ${value.img}" alt="">
+                
+                </td>
+                <td class="px-4 py-4  text-sm text-gray-500">
+                    ${value.desc}
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-right text-sm font-medium">
+                    <a href="/admin/edit/${value.id}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap text-right text-sm font-medium">
+                    <a href="" class="text-rose-600">Delete</a>
+                </td>
+                
+                </tr>
+                
+                `).join("")}
+                
 
-            <!-- More people... -->
-          </tbody>
-          
-        </table>
-        
+                    <!-- More people... -->
+                </tbody>
+            </table>
+            </div>
+            </div>
+            </div>
+          </div>
+
         <a href="/admin/add" class="sm:ml-3">
         <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
           <!-- Heroicon name: solid/check -->

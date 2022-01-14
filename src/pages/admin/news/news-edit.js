@@ -1,11 +1,11 @@
 /* eslint-disable linebreak-style */
 
 import NavAdmin from "../../../components/admin/NavAdmin";
-import { data } from "../../../data";
+import data from "../../../data";
 
 const AdminEditNews = {
     runder(id) {
-        const result = data.find((post) => post.id === id);
+        const result = data.find((post) => post.id == id);
         return /* html */`
         
         <div> ${NavAdmin.runder()} </div>

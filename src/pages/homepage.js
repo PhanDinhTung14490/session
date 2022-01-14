@@ -1,5 +1,4 @@
 /* eslint-disable linebreak-style */
-import ActivateList from "../components/activate";
 import Banner from "../components/banner";
 import Footer from "../components/footer";
 import Header from "../components/header";
@@ -18,10 +17,6 @@ const HomePage = {
                 <div class="new" > 
                 ${NewList.runder()}
                 </div>
-
-
-                <div class="activate">
-                ${ActivateList.runder()}
             
             </div>
             <footer> ${Footer.runder()} </footer>

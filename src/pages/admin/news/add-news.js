@@ -11,7 +11,7 @@ const AdminAddNew = {
         <div class="shadow sm:rounded-md sm:overflow-hidden">
         <h2 class="mt-6 text-center text-3xl font-normal uppercase font-sans text-gray-900">
         thêm sản phẩm
-      </h2>
+        </h2>
           <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
             <div class="grid grid-cols-3 gap-6">
               <div class="col-span-3 sm:col-span-2">

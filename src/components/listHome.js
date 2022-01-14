@@ -1,5 +1,6 @@
 /* eslint-disable linebreak-style */
-import { data } from "../data";
+
+import data from "../data";
 
 const NewList = {
     runder() {
@@ -13,7 +14,7 @@ const NewList = {
         <div class="content-list-item border border-bg-black">
         <div class="p-6">
          <a href="/detail/${post.id}">
-           <img width="100%" src="${post.img}" alt="">
+           <img  src="${post.img}" alt="">
          </a>
          <h3 class="title-tiem my-2 text-lg text-orange-600 font-medium my-8">
            ${post.title}

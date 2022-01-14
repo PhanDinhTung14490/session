@@ -5,7 +5,7 @@ const Header = {
         <div class="bg-indigo-900 py-8 ">
 
         <a href="#">
-            <img src="https://phothongcaodang.fpt.edu.vn/wp-content/uploads/LOGO-PTC%C4%90-White-Transparency.png"
+            <img src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/hawkeye_lob_log_def_01.png"
                 alt="" width="150px" class="mx-auto">
         </a>
 
