@@ -3,7 +3,7 @@ import { data } from "../../data";
 import NavAdmin from "./NavAdmin";
 
 /* eslint-disable linebreak-style */
-const ProductList = {
+const NewsList = {
     runder() {
         return /* html */`
         <div> ${NavAdmin.runder()} </div>
@@ -34,16 +34,8 @@ const ProductList = {
           <td class="px-6 py-4 whitespace-nowrap">
             <div class="flex items-center">
               <div class="flex-shrink-0 h-10 w-10">
+              ${value.id}
                
-              </div>
-              <div class="ml-4">
-                <div class="text-sm font-medium text-gray-900">
-              
-                </div>
-                <div class="text-sm text-gray-500">
-              
-                ${value.id}
-                </div>
               </div>
             </div>
           </td>
@@ -71,6 +63,7 @@ const ProductList = {
 
             <!-- More people... -->
           </tbody>
+          
         </table>
         
         <a href="/admin/add" class="sm:ml-3">
@@ -86,4 +79,4 @@ const ProductList = {
         `;
     },
 };
-export default ProductList;
+export default NewsList;

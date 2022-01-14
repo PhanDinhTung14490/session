@@ -1,9 +1,9 @@
 /* eslint-disable linebreak-style */
-import ActivateList from "../components/activate-list";
+import ActivateList from "../components/activate";
 import Banner from "../components/banner";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import NewList from "../components/new-list";
+import NewList from "../components/listHome";
 
 /* eslint-disable linebreak-style */
 const HomePage = {

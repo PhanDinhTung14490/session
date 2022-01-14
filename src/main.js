@@ -2,9 +2,9 @@
 import Navigo from "navigo";
 
 import DashboardAdmin from "./pages/admin/dashboard";
-import AddProduct from "./pages/admin/news/add";
-import AdminEditProduct from "./pages/admin/news/product-edit";
-import ProductPage from "./pages/admin/product-page";
+import AdminAddNew from "./pages/admin/news/add-news";
+import AdminEditNews from "./pages/admin/news/news-edit";
+import ProductPage from "./pages/admin/newsListAdmin";
 
 // import AboutPage from "./pages/about";
 import DetailPage from "./pages/detail";
@@ -35,11 +35,11 @@ router.on({
         runder(SingIn.runder());
     },
     "/admin/add": () => {
-        runder(AddProduct.runder());
+        runder(AdminAddNew.runder());
     },
     "/admin/edit/:id": ({ data }) => {
         const { id } = data;
-        runder(AdminEditProduct.runder(+id));
+        runder(AdminEditNews.runder(+id));
     },
 
     // chi tiet bai viet
@@ -47,7 +47,7 @@ router.on({
         const { id } = data;
         runder(DetailPage.runder(+id));
     },
-    "/product/admin": () => {
+    "/list/news/admin": () => {
         runder(ProductPage.runder());
     },
     "/admin/dashboard": () => {
