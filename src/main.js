@@ -24,19 +24,11 @@ const runder = (content) => {
     document.querySelector("#app").innerHTML = content;
 };
 router.on({
-    "/": () => {
-        runder(HomePage.runder());
-        // console.log("home page");
-    },
-    "/signup": () => {
-        runder(SignUp.runder());
-    },
-    "/signin": () => {
-        runder(SingIn.runder());
-    },
-    "/admin/add": () => {
-        runder(AdminAddNew.runder());
-    },
+    "/": () => runder(HomePage.runder()),
+    // console.log("home page");
+    "/signup": () => runder(SignUp.runder()),
+    "/signin": () => runder(SingIn.runder()),
+    "/admin/add": () => runder(AdminAddNew.runder()),
     "/admin/edit/:id": ({ data }) => {
         const { id } = data;
         runder(AdminEditNews.runder(+id));
@@ -47,12 +39,8 @@ router.on({
         const { id } = data;
         runder(DetailPage.runder(+id));
     },
-    "/list/news/admin": () => {
-        runder(ProductPage.runder());
-    },
-    "/admin/dashboard": () => {
-        runder(DashboardAdmin.runder());
-    },
+    "/list/news/admin": () => runder(ProductPage.runder()),
+    "/admin/dashboard": () => runder(DashboardAdmin.runder()),
 
 });
 
