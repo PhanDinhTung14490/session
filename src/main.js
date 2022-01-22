@@ -2,45 +2,40 @@
 import Navigo from "navigo";
 
 import DashboardAdmin from "./pages/admin/dashboard";
+import NewsAdminList from "./pages/admin/news";
 import AdminAddNew from "./pages/admin/news/add-news";
 import AdminEditNews from "./pages/admin/news/news-edit";
-import ProductPage from "./pages/admin/newsListAdmin";
-
-// import AboutPage from "./pages/about";
 import DetailPage from "./pages/detail";
-
 import HomePage from "./pages/homepage";
-// import ProductPage from "./pages/product";
-
 import SingIn from "./pages/signin";
 import SignUp from "./pages/signup";
 
-// console.log(HomePage);
 const router = new Navigo("/", { linksSelector: "a" });
 
-const runder = (content) => {
+const print = async (content, id) => {
     // console.log(content);
-
-    document.querySelector("#app").innerHTML = content;
+    // content trả về cho chúng ta 1 object(render và afterRender)
+    document.querySelector("#app").innerHTML = await content.runder(id);
+    if (content.afterRender) await content.afterRender();
 };
 router.on({
-    "/": () => runder(HomePage.runder()),
+    "/": () => print(HomePage),
     // console.log("home page");
-    "/signup": () => runder(SignUp.runder()),
-    "/signin": () => runder(SingIn.runder()),
-    "/admin/add": () => runder(AdminAddNew.runder()),
+    "/signup": () => print(SignUp),
+    "/signin": () => print(SingIn),
+    "/admin/add": () => print(AdminAddNew),
     "/admin/edit/:id": ({ data }) => {
         const { id } = data;
-        runder(AdminEditNews.runder(+id));
+        print(AdminEditNews.runder(+id));
     },
 
     // chi tiet bai viet
     "/detail/:id": ({ data }) => {
         const { id } = data;
-        runder(DetailPage.runder(+id));
+        print(DetailPage.runder(+id));
     },
-    "/list/news/admin": () => runder(ProductPage.runder()),
-    "/admin/dashboard": () => runder(DashboardAdmin.runder()),
+    "/list/news/admin": () => print(NewsAdminList),
+    "/admin/dashboard": () => print(DashboardAdmin),
 
 });
 
@@ -65,3 +60,14 @@ router.resolve();
 // const tuong2 = new TuongPhep("krixi", 159, 0);
 // tuong1.showIntro();
 // console.log(tuong2.showIntro());
+
+// const API = "https://5e79b4b817314d00161333da.mockapi.io/posts";
+// fetch(API)
+//     .then((response) => response.json())
+//     .then((data) => console.log(data));
+
+// async await
+
+// const getProduct = () => new Promise((resolve,reject)={
+//     setTimeout
+// })

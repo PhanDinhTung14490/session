@@ -6,7 +6,7 @@ import NewList from "../components/listHome";
 
 /* eslint-disable linebreak-style */
 const HomePage = {
-    runder() {
+    async   runder() {
         return /* html */`
        <div class="container mx-auto"> 
             <header> ${Header.runder()}  </header>
@@ -15,7 +15,7 @@ const HomePage = {
                 </div>
 
                 <div class="new" > 
-                ${NewList.runder()}
+                ${await NewList.runder()}
                 </div>
             
             </div>

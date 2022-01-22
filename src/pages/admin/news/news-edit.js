@@ -16,7 +16,7 @@ const AdminEditNews = {
                 <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                 
                    
-                <form action="#" method="POST" class=" ">
+                <form action="#" method="POST" class="">
                 
                             
                 <h2 class="mt-6 text-center text-3xl font-normal uppercase font-sans text-gray-900">

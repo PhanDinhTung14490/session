@@ -1,11 +1,14 @@
 /* eslint-disable linebreak-style */
 
-import data from "../../data";
-import NavAdmin from "./NavAdmin";
+import { getAll, remove } from "../../../api/posts";
+import NavAdmin from "../../../components/admin/NavAdmin";
 
 /* eslint-disable linebreak-style */
-const NewsList = {
-    runder() {
+const NewsAdminList = {
+    // render định nghĩa là phương thức hiển thị html
+    async runder() {
+        const { data } = await getAll();
+
         return /* html */`
         <div> ${NavAdmin.runder()} </div>
         <div class ="flex my-8 justify-between "> 
@@ -58,34 +61,37 @@ const NewsList = {
                     </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
-                ${data.map((value) => `
+                ${data.map((post) => `
                 <tr>
                 <td class="px-4 py-4 whitespace-nowrap">
                     <div class="flex items-center">
                     <div class="flex-shrink-0 h-10 w-10">
-                    ${value.id}
+                    ${post.id}
                     
                     </div>
                     </div>
                 </td>
                 <td class="px-4 py-4 whitespace-nowrap">
-                    <div class="text-sm text-gray-900">   ${value.title}</div>
+                    <div class="text-sm text-gray-900">   ${post.title}</div>
                     
                 </td>
                 <td class="px-4 py-4 whitespace-nowrap">
                 
                     
-                    <img class="w-[300px]" src=" ${value.img}" alt="">
+                    <img class="w-[300px]" src=" ${post.img}" alt="">
                 
                 </td>
                 <td class="px-4 py-4  text-sm text-gray-500">
-                    ${value.desc}
+                    ${post.desc}
                 </td>
                 <td class="px-4 py-4 whitespace-nowrap text-right text-sm font-medium">
-                    <a href="/admin/edit/${value.id}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                    <a href="/admin/edit/${post.id}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                 </td>
                 <td class="px-4 py-4 whitespace-nowrap text-right text-sm font-medium">
-                    <a href="" class="text-rose-600">Delete</a>
+                <button type="button" data-id=${post.id} class=" btn btn-remove text-rose-600">
+                <!-- Heroicon name: solid/check -->
+                  Delete
+              </button>
                 </td>
                 
                 </tr>
@@ -104,5 +110,23 @@ const NewsList = {
      
         `;
     },
+    afterRender() {
+        // lay danh sach button sau khi render
+        const buttons = document.querySelectorAll(".btn");
+        // tao vong lap cho nodelist
+        buttons.forEach((btn) => {
+            // lay id tu thuoc tinh data-id cua button
+            const { id } = btn.dataset;
+            btn.addEventListener("click", () => {
+                const confirm = window.confirm("are you sure ?");
+                if (confirm) {
+                    // goio ham delete trong folder api va ban id vao ham
+                    remove(id).then(() => {
+                        console.log("you deleted !");
+                    });
+                }
+            });
+        });
+    },
 };
-export default NewsList;
+export default NewsAdminList;
