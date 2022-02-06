@@ -1,11 +1,10 @@
 /* eslint-disable linebreak-style */
-import axios from "axios";
 import { add } from "../../../api/posts";
 import NavAdmin from "../../../components/admin/NavAdmin";
 
 /* eslint-disable linebreak-style */
 const AdminAddNew = {
-    runder() {
+    async runder() {
         return /* html */`
         <div> ${NavAdmin.runder()} </div>
         

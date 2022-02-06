@@ -1,17 +1,18 @@
 /* eslint-disable linebreak-style */
+import { get } from "../api/posts";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import data from "../data";
 
 const DetailPage = {
-    runder(id) {
-        const result = data.find((post) => post.id == id);
+    async runder(id) {
+        const { data } = await get(id);
+        // const result = data.find((post) => post.id === id);
         return /* html */ `
         <header> ${Header.runder()} </header>
             <div>
-                <h1>${result.title} </h1>
-                <img src="${result.img}"/>
-                <p>${result.desc} </p>
+                <h1>${data.title} </h1>
+                <img src="${data.img}"/>
+                <p>${data.desc} </p>
                 
             </div>
 

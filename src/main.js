@@ -16,7 +16,7 @@ const print = async (content, id) => {
     // console.log(content);
     // content trả về cho chúng ta 1 object(render và afterRender)
     document.querySelector("#app").innerHTML = await content.runder(id);
-    if (content.afterRender) await content.afterRender();
+    if (content.afterRender) await content.afterRender(id);
 };
 router.on({
     "/": () => print(HomePage),
@@ -25,14 +25,12 @@ router.on({
     "/signin": () => print(SingIn),
     "/admin/add": () => print(AdminAddNew),
     "/admin/edit/:id": ({ data }) => {
-        const { id } = data;
-        print(AdminEditNews.runder(+id));
+        print(AdminEditNews, data.id);
     },
 
     // chi tiet bai viet
     "/detail/:id": ({ data }) => {
-        const { id } = data;
-        print(DetailPage.runder(+id));
+        print(DetailPage, data.id);
     },
     "/list/news/admin": () => print(NewsAdminList),
     "/admin/dashboard": () => print(DashboardAdmin),
