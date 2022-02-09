@@ -18,13 +18,13 @@ const Header = {
                     <a href="/"  class="text-white p-4 hover:text-pink-900">Trang Chủ</a>
                 </li>
                 <li class="">
-                    <a href="/signup" class="text-white p-4 hover:text-pink-900">sign up</a>
+                    <a href="/#/signup" class="text-white p-4 hover:text-pink-900">sign up</a>
                 </li>
                 <li class="">
-                    <a href="/signin" class="text-white p-4 hover:text-pink-900">sign in</a>
+                    <a href="/#/signin" class="text-white p-4 hover:text-pink-900">sign in</a>
                 </li>
                 <li class="">
-                    <a href="/admin/dashboard" class="text-white p-4 hover:text-pink-900">Admin</a>
+                    <a href="/#/admin/dashboard" class="text-white p-4 hover:text-pink-900">Admin</a>
                 </li>
             </ul>
         </nav>

@@ -10,7 +10,7 @@ import HomePage from "./pages/homepage";
 import SingIn from "./pages/signin";
 import SignUp from "./pages/signup";
 
-const router = new Navigo("/", { linksSelector: "a" });
+const router = new Navigo("/", { linksSelector: "a", hash: true });
 
 const print = async (content, id) => {
     // console.log(content);

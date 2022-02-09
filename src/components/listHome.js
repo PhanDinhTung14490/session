@@ -13,7 +13,7 @@ const NewList = {
                 
                 <div class="content-list-item border border-bg-black">
                 <div class="p-6">
-                 <a href="/detail/${post.id}">
+                 <a href="/#/detail/${post.id}">
                    <img  src="${post.img}" alt="">
                  </a>
                  <h3 class="title-tiem my-2 text-lg text-orange-600 font-medium my-8">
