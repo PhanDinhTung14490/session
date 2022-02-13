@@ -1,7 +1,9 @@
 /* eslint-disable linebreak-style */
 import axios from "axios";
+import NewsAdminList from ".";
 import { add } from "../../../api/posts";
 import NavAdmin from "../../../components/admin/NavAdmin";
+import { reRender } from "../../../utils";
 
 /* eslint-disable linebreak-style */
 const AdminAddNew = {
@@ -109,15 +111,10 @@ const AdminAddNew = {
                 desc: document.querySelector("#desc-post").value,
 
             });
+            window.location.href = "/list/news/admin";
+            reRender(NewsAdminList, "#app");
         });
     },
 };
-// fetch(" http://localhost:3002/post", {
-//     method: "POST",
-//     headers: {
-//         "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(post),
-// });
 
 export default AdminAddNew;

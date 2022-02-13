@@ -60,48 +60,32 @@
       "img": "http://placeimg.com/640/480/sports",
       "desc": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
       "id": "19"
+    }
+  ],
+  "users": [
+    {
+      "email": "hanh@gmail.com",
+      "password": "$2a$10$VokHtj3yelOXtKDXKec5M.a.yeBya5E3Gi807WnT4b3sR1MjiqCKO",
+      "username": "hanh",
+      "id": 1
     },
     {
-      "0": {
-        "createdAt": "2022-01-10T20:33:27.477Z",
-        "title": "Bài viết mới",
-        "img": "http://placeimg.com/640/480/sports",
-        "desc": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-        "id": "2"
-      },
-      "createdAt": "2022-01-18T23:32:25.238Z",
-      "title": "Bennie Moore",
-      "img": "http://placeimg.com/640/480/sports",
-      "desc": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "id": "21"
+      "email": "hanhbhph15007@fpt.edu.vn",
+      "password": "$2a$10$oWupTyY/lzuQlYsW1EJFC.7TtUlKjIPRbcBfqlPdnCoa2X6Cygykq",
+      "username": "hanh",
+      "id": 2
     },
     {
-      "createdAt": "2022-01-18T09:17:36.448Z",
-      "title": "David Beahan",
-      "img": "http://placeimg.com/640/480/cats",
-      "desc": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-      "id": "22"
+      "email": "Tuilacanecau@hotmail.com",
+      "password": "$2a$10$zcp60WhVxxGTKzyMWjWwp.O8WSs1dTSp5edb3Jyg/Saa6XtGulRMy",
+      "username": "hanh",
+      "id": 3
     },
     {
-      "createdAt": "2022-01-18T19:25:18.728Z",
-      "title": "Genevieve Upton II",
-      "img": "http://placeimg.com/640/480/cats",
-      "desc": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-      "id": "25"
-    },
-    {
-      "createdAt": "2022-01-18T08:16:02.361Z",
-      "title": "Thêm mới bài viết",
-      "img": "http://placeimg.com/640/480/business",
-      "desc": "Bài viêt mới đăng",
-      "id": "31"
-    },
-    {
-      "createdAt": "2022-01-18T22:06:44.377Z",
-      "title": "Long chanh thôn đã chỉnh sửa",
-      "img": "http://placeimg.com/640/480/fashion",
-      "desc": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-      "id": "32"
+      "email": "hoa@gmail.com",
+      "password": "$2a$10$sfTq.3ZUrZOiXGOuyAQnsO.tMCpYP5BuRedmPsGiI47m1m1eAcIGu",
+      "username": "hoa",
+      "id": 4
     }
   ]
 }

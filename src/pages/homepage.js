@@ -9,7 +9,9 @@ const HomePage = {
     async   runder() {
         return /* html */`
        <div class="container mx-auto"> 
-            <header> ${Header.runder()}  </header>
+            <div id="header"> 
+                <header> ${Header.runder()}  </header>
+            </div>
             <div class="mt-4"> 
                 ${Banner.runder()}
                 </div>
@@ -23,6 +25,9 @@ const HomePage = {
        </div>
 
         `;
+    },
+    afterRender() {
+        Header.afterRender();
     },
 };
 export default HomePage;

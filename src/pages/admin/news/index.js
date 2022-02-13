@@ -1,7 +1,8 @@
 /* eslint-disable linebreak-style */
-
+import toastr from "toastr";
 import { getAll, remove } from "../../../api/posts";
 import NavAdmin from "../../../components/admin/NavAdmin";
+import { reRender } from "../../../utils";
 
 /* eslint-disable linebreak-style */
 const NewsAdminList = {
@@ -122,7 +123,10 @@ const NewsAdminList = {
                 if (confirm) {
                     // goio ham delete trong folder api va ban id vao ham
                     remove(id).then(() => {
-                        console.log("you deleted !");
+                        // console.log("you deleted !");
+                        toastr.success("you deleted !");
+                    }).then(() => {
+                        reRender(NewsAdminList, "#app");
                     });
                 }
             });

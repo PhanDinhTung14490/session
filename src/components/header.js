@@ -1,3 +1,6 @@
+import toastr from "toastr";
+import { reRender } from "../utils";
+import "toastr/build/toastr.min.css";
 /* eslint-disable linebreak-style */
 const Header = {
     runder() {
@@ -29,14 +32,34 @@ const Header = {
             </ul>
         </nav>
         <div class="search flex ml-80 py-3">
-            <input type="text"
-                class=" h-6 pr-4 mr-2   placeholder:italic rounded-none placeholder:text-gray-400 block bg-white w-full border border-gray-300 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm ">
-            <input type="button" value="tìm kiếm" class="border-2 bg-indigo-900 text-white uppercase h-6 px-8 ">
+            ${localStorage.getItem("user") ? `
+            
+            <ul class="flex" id="menu" >
+                <li class="">
+                    <a  id="account-name" class="text-white p-4 hover:text-pink-900"></a>
+                </li>
+                <li class="">
+                    <a href="" id="logout" class="text-white p-4 hover:text-pink-900">Logout</a>
+                </li>
+            </ul>
+            ` : ""} 
         </div>
     </div>
 
 
         `;
+    },
+    afterRender() {
+        const user = JSON.parse(localStorage.getItem("user"));
+        const logout = document.querySelector("#logout");
+
+        document.querySelector("#account-name").innerHTML = user.username;
+        // log out
+        logout.addEventListener("click", () => {
+            toastr.success("Logout thàng công");
+            localStorage.removeItem("user");
+            reRender(Header, "#header");
+        });
     },
 };
 export default Header;
